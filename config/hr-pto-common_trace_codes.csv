@@ -1,0 +1,5 @@
+msg_par;level;msg_text
+1;NOTIFY;трассировка уровня СОРМ1
+2;NOTIFY;трассировка уровня X.25
+3;NOTIFY;трассировка уровня LABP
+4;NOTIFY;трассировка уровня HDLC

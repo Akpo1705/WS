@@ -1,0 +1,4 @@
+#define TRANSPORT_MAJOR		1
+#define TRANSPORT_MINOR		25
+
+#define TRANSPORT_PROTO		1

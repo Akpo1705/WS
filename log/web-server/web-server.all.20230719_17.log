@@ -1,0 +1,117 @@
+[19-07-2023 17:01:34.076 usr] Выполнена настройка интерфейса ПТО release 146 build 20210403 с транспортом: Norsi-Trans Transport Library version 1.21-308 build 20210403 protocol 1, точка web-server, ЛА ПТО web-server
+[19-07-2023 17:01:34.076 err] unable to specify this point ID as peer ID
+[19-07-2023 17:01:34.076 usr] Завершено конфигурирование модуля (процесс 110876)
+[19-07-2023 17:01:34.076 err] unable to specify this point ID as peer ID
+[19-07-2023 17:01:35.077 err] unable to write stats with error code -3
+[19-07-2023 17:01:38.080 err] unable to write stats with error code -3
+[19-07-2023 17:01:41.083 err] unable to write stats with error code -3
+[19-07-2023 17:01:44.086 err] unable to write stats with error code -3
+[19-07-2023 17:01:47.088 err] unable to write stats with error code -3
+[19-07-2023 17:01:50.091 err] unable to write stats with error code -3
+[19-07-2023 17:01:53.094 err] unable to write stats with error code -3
+[19-07-2023 17:01:56.097 err] unable to write stats with error code -3
+[19-07-2023 17:01:59.100 err] unable to write stats with error code -3
+[19-07-2023 17:02:02.103 err] unable to write stats with error code -3
+[19-07-2023 17:02:05.106 err] unable to write stats with error code -3
+[19-07-2023 17:02:08.109 err] unable to write stats with error code -3
+[19-07-2023 17:02:11.112 err] unable to write stats with error code -3
+[19-07-2023 17:02:14.115 err] unable to write stats with error code -3
+[19-07-2023 17:02:17.118 err] unable to write stats with error code -3
+[19-07-2023 17:02:20.121 err] unable to write stats with error code -3
+[19-07-2023 17:02:23.124 err] unable to write stats with error code -3
+[19-07-2023 17:02:26.127 err] unable to write stats with error code -3
+[19-07-2023 17:02:29.130 err] unable to write stats with error code -3
+[19-07-2023 17:02:32.133 err] unable to write stats with error code -3
+[19-07-2023 17:02:32.987 err] select has been interrupted
+[19-07-2023 17:02:32.987 usr] Остановка модуля (процесс 110876, точка web-server)...
+[19-07-2023 17:02:32.988 err] unable to specify this point ID as peer ID
+[19-07-2023 17:02:32.988 usr] Модуль остановлен
+[19-07-2023 17:02:32.988 err] unable to specify this point ID as peer ID
+[19-07-2023 17:02:32.988 err] save cache(2012006A, web-server): cache is empty, removing files
+[19-07-2023 17:02:32.988 err] unable to write stats with error code -3
+[19-07-2023 17:02:32.988 err] terminating point web-server...
+[19-07-2023 17:02:45.341 usr] Выполнена настройка интерфейса ПТО release 146 build 20210403 с транспортом: Norsi-Trans Transport Library version 1.21-308 build 20210403 protocol 1, точка web-server, ЛА ПТО web-server
+[19-07-2023 17:02:45.341 err] unable to specify this point ID as peer ID
+[19-07-2023 17:02:45.341 usr] Завершено конфигурирование модуля (процесс 110966)
+[19-07-2023 17:02:45.341 err] unable to specify this point ID as peer ID
+[19-07-2023 17:02:46.342 err] unable to write stats with error code -3
+[19-07-2023 17:02:48.284 err] select has been interrupted
+[19-07-2023 17:02:48.284 usr] Остановка модуля (процесс 110966, точка web-server)...
+[19-07-2023 17:02:48.284 err] unable to specify this point ID as peer ID
+[19-07-2023 17:02:48.284 usr] Модуль остановлен
+[19-07-2023 17:02:48.284 err] unable to specify this point ID as peer ID
+[19-07-2023 17:02:48.284 err] save cache(2012006A, web-server): cache is empty, removing files
+[19-07-2023 17:02:48.284 err] unable to write stats with error code -3
+[19-07-2023 17:02:48.284 err] terminating point web-server...
+[19-07-2023 17:02:51.800 usr] Выполнена настройка интерфейса ПТО release 146 build 20210403 с транспортом: Norsi-Trans Transport Library version 1.21-308 build 20210403 protocol 1, точка web-server, ЛА ПТО web-server
+[19-07-2023 17:02:51.800 err] unable to specify this point ID as peer ID
+[19-07-2023 17:02:51.800 usr] Завершено конфигурирование модуля (процесс 110979)
+[19-07-2023 17:02:51.800 err] unable to specify this point ID as peer ID
+[19-07-2023 17:02:52.802 err] unable to write stats with error code -3
+[19-07-2023 17:02:53.260 err] select has been interrupted
+[19-07-2023 17:02:53.260 usr] Остановка модуля (процесс 110979, точка web-server)...
+[19-07-2023 17:02:53.260 err] unable to specify this point ID as peer ID
+[19-07-2023 17:02:53.260 usr] Модуль остановлен
+[19-07-2023 17:02:53.260 err] unable to specify this point ID as peer ID
+[19-07-2023 17:02:53.260 err] save cache(2012006A, web-server): cache is empty, removing files
+[19-07-2023 17:02:53.260 err] unable to write stats with error code -3
+[19-07-2023 17:02:53.260 err] terminating point web-server...
+[19-07-2023 17:03:01.750 usr] Выполнена настройка интерфейса ПТО release 146 build 20210403 с транспортом: Norsi-Trans Transport Library version 1.21-308 build 20210403 protocol 1, точка web-server, ЛА ПТО web-server
+[19-07-2023 17:03:01.750 err] unable to specify this point ID as peer ID
+[19-07-2023 17:03:01.750 usr] Завершено конфигурирование модуля (процесс 110995)
+[19-07-2023 17:03:01.750 err] unable to specify this point ID as peer ID
+[19-07-2023 17:03:02.751 err] unable to write stats with error code -3
+[19-07-2023 17:03:05.754 err] unable to write stats with error code -3
+[19-07-2023 17:03:08.756 err] unable to write stats with error code -3
+[19-07-2023 17:03:11.760 err] unable to write stats with error code -3
+[19-07-2023 17:03:14.763 err] unable to write stats with error code -3
+[19-07-2023 17:03:17.766 err] unable to write stats with error code -3
+[19-07-2023 17:03:20.769 err] unable to write stats with error code -3
+[19-07-2023 17:03:23.772 err] unable to write stats with error code -3
+[19-07-2023 17:03:26.775 err] unable to write stats with error code -3
+[19-07-2023 17:03:29.778 err] unable to write stats with error code -3
+[19-07-2023 17:03:32.781 err] unable to write stats with error code -3
+[19-07-2023 17:03:35.784 err] unable to write stats with error code -3
+[19-07-2023 17:03:38.787 err] unable to write stats with error code -3
+[19-07-2023 17:03:41.790 err] unable to write stats with error code -3
+[19-07-2023 17:03:44.792 err] unable to write stats with error code -3
+[19-07-2023 17:03:47.795 err] unable to write stats with error code -3
+[19-07-2023 17:03:50.798 err] unable to write stats with error code -3
+[19-07-2023 17:03:53.472 err] select has been interrupted
+[19-07-2023 17:03:53.472 usr] Остановка модуля (процесс 110995, точка web-server)...
+[19-07-2023 17:03:53.472 err] unable to specify this point ID as peer ID
+[19-07-2023 17:03:53.472 usr] Модуль остановлен
+[19-07-2023 17:03:53.472 err] unable to specify this point ID as peer ID
+[19-07-2023 17:03:53.472 err] save cache(2012006A, web-server): cache is empty, removing files
+[19-07-2023 17:03:53.472 err] unable to write stats with error code -3
+[19-07-2023 17:03:53.472 err] terminating point web-server...
+[19-07-2023 17:04:03.120 usr] Выполнена настройка интерфейса ПТО release 146 build 20210403 с транспортом: Norsi-Trans Transport Library version 1.21-308 build 20210403 protocol 1, точка web-server, ЛА ПТО web-server
+[19-07-2023 17:04:03.120 err] unable to specify this point ID as peer ID
+[19-07-2023 17:04:03.120 usr] Завершено конфигурирование модуля (процесс 111023)
+[19-07-2023 17:04:03.120 err] unable to specify this point ID as peer ID
+[19-07-2023 17:04:04.121 err] unable to write stats with error code -3
+[19-07-2023 17:04:07.124 err] unable to write stats with error code -3
+[19-07-2023 17:04:10.126 err] unable to write stats with error code -3
+[19-07-2023 17:04:13.129 err] unable to write stats with error code -3
+[19-07-2023 17:04:16.132 err] unable to write stats with error code -3
+[19-07-2023 17:04:19.135 err] unable to write stats with error code -3
+[19-07-2023 17:04:22.138 err] unable to write stats with error code -3
+[19-07-2023 17:04:25.140 err] unable to write stats with error code -3
+[19-07-2023 17:04:28.143 err] unable to write stats with error code -3
+[19-07-2023 17:04:31.146 err] unable to write stats with error code -3
+[19-07-2023 17:04:34.149 err] unable to write stats with error code -3
+[19-07-2023 17:04:37.152 err] unable to write stats with error code -3
+[19-07-2023 17:04:40.155 err] unable to write stats with error code -3
+[19-07-2023 17:04:43.158 err] unable to write stats with error code -3
+[19-07-2023 17:04:46.160 err] unable to write stats with error code -3
+[19-07-2023 17:04:49.163 err] unable to write stats with error code -3
+[19-07-2023 17:04:52.166 err] unable to write stats with error code -3
+[19-07-2023 17:04:55.169 err] unable to write stats with error code -3
+[19-07-2023 17:04:56.440 err] select has been interrupted
+[19-07-2023 17:04:56.440 usr] Остановка модуля (процесс 111023, точка web-server)...
+[19-07-2023 17:04:56.440 err] unable to specify this point ID as peer ID
+[19-07-2023 17:04:56.440 usr] Модуль остановлен
+[19-07-2023 17:04:56.440 err] unable to specify this point ID as peer ID
+[19-07-2023 17:04:56.440 err] save cache(2012006A, web-server): cache is empty, removing files
+[19-07-2023 17:04:56.440 err] unable to write stats with error code -3
+[19-07-2023 17:04:56.440 err] terminating point web-server...

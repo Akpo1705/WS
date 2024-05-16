@@ -1,0 +1,22 @@
+[27-07-2023 15:27:40.863 usr] Выполнена настройка интерфейса ПТО release 146 build 20210403 с транспортом: Norsi-Trans Transport Library version 1.21-308 build 20210403 protocol 1, точка web-server, ЛА ПТО web-server
+[27-07-2023 15:27:40.863 err] unable to specify this point ID as peer ID
+[27-07-2023 15:27:40.863 usr] Завершено конфигурирование модуля (процесс 57179)
+[27-07-2023 15:27:40.863 err] unable to specify this point ID as peer ID
+[27-07-2023 15:28:34.770 usr] Остановка модуля (процесс 57179, точка web-server)...
+[27-07-2023 15:28:34.771 err] unable to specify this point ID as peer ID
+[27-07-2023 15:28:34.771 usr] Модуль остановлен
+[27-07-2023 15:28:34.771 err] unable to specify this point ID as peer ID
+[27-07-2023 15:28:34.771 err] save cache(2012006A, web-server): cache is empty, removing files
+[27-07-2023 15:28:34.771 err] unable to write stats with error code -3
+[27-07-2023 15:28:34.771 err] terminating point web-server...
+[27-07-2023 15:29:22.358 usr] Выполнена настройка интерфейса ПТО release 146 build 20210403 с транспортом: Norsi-Trans Transport Library version 1.21-308 build 20210403 protocol 1, точка web-server, ЛА ПТО web-server
+[27-07-2023 15:29:22.358 err] unable to specify this point ID as peer ID
+[27-07-2023 15:29:22.358 usr] Завершено конфигурирование модуля (процесс 58488)
+[27-07-2023 15:29:22.358 err] unable to specify this point ID as peer ID
+[27-07-2023 15:29:47.349 usr] Остановка модуля (процесс 58488, точка web-server)...
+[27-07-2023 15:29:47.349 err] unable to specify this point ID as peer ID
+[27-07-2023 15:29:47.350 usr] Модуль остановлен
+[27-07-2023 15:29:47.350 err] unable to specify this point ID as peer ID
+[27-07-2023 15:29:47.350 err] save cache(2012006A, web-server): cache is empty, removing files
+[27-07-2023 15:29:47.350 err] unable to write stats with error code -3
+[27-07-2023 15:29:47.350 err] terminating point web-server...

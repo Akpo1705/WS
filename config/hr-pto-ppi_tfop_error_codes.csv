@@ -1,0 +1,4 @@
+msg_par;level;msg_text
+-400;NOTIFY;ошибка набора номера
+-401;NOTIFY;ошибка дозвона
+
