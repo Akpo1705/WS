@@ -1,0 +1,5 @@
+#define MODULE_RELEASE 1
+#define MODULE_BUILD 20230717
+#define MODULE_NAME "web-server"
+#define POINT_NAME MODULE_NAME
+
