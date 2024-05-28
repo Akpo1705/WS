@@ -73,7 +73,12 @@ static int http_parse_headers(struct http_header *header, const char *hdr_line)
     		header->fetchDest = STYLE;
     	}else if(strcmp(header_content,"document") == 0){
     		header->fetchDest = DOCUMENT;
+    	}else if(strcmp(header_content,"script") == 0){
+    		header->fetchDest = SCRIPT;
+    	}else if(strcmp(header_content,"manifest") == 0){
+    		header->fetchDest = MANIFEST;
     	}
+
     }
 
     //if(!strcmp())
@@ -195,7 +200,7 @@ char* ws_handshake(struct http_header *header, uint8_t *in_buf, int in_len, int 
 	char path[255] = {0};
 	strcat(path,"./build");
 
-	if(header->fetchDest == STYLE || header->fetchDest == SCRIPT || header->fetchDest == MEDIA){
+	if(header->fetchDest == STYLE || header->fetchDest == SCRIPT || header->fetchDest == MEDIA || header->fetchDest == MANIFEST){
 		getTimeString(timeBuf);
 			wr = snprintf((char *)out_header, sizeof(out_header),
 					"HTTP/1.1 200 OK\r\n"
@@ -205,38 +210,42 @@ char* ws_handshake(struct http_header *header, uint8_t *in_buf, int in_len, int 
 					WS_HDR_DATE,""
 			);
 			strcat(path,header->uri);
+
+			fprintf(stdout,"%s \n", path);
+
 			return gethtmlfile(path,out_header,wr, out_len);
 	}
+
 	if(!strcmp(header->method,"GET") && !strcmp(header->uri,"/")){
 		wr = ws_get_handshake_header_basic(out_header,sizeof(out_header));
 
 		strcat(path,"/index.html");
-
+		fprintf(stdout,"%s \n", path);
 		return gethtmlfile(path, out_header, wr ,out_len);
 	}
-	else if (!strcmp(header->method,"GET") && !strcmp(header->uri,"/favicon.ico")){
-
-			getTimeString(timeBuf);
-			wr = snprintf((char *)out_header, sizeof(out_header),
-					"HTTP/1.1 200 OK\r\n"
-					"%s: %s\r\n"
-					"%s: %s\r\n\r\n",
-					WS_HDR_COT,WS_HDR_TEXT_HTML,
-					WS_HDR_DATE,timeBuf
-			);
-			return gethtmlfile("./images/favicon.ico",out_header,wr, out_len);
-	}
-	else if(!strcmp(header->method,"GET")&& !strcmp(header->uri,"/styles.css")){
-		getTimeString(timeBuf);
-		wr = snprintf((char *)out_header, sizeof(out_header),
-				"HTTP/1.1 200 OK\r\n"
-				"%s: %s\r\n"
-				"%s: %s\r\n\r\n",
-				WS_HDR_COT,WS_HDR_TEXT_CSS,
-				WS_HDR_DATE,timeBuf
-		);
-		return gethtmlfile("./styles/styles.css",out_header,wr, out_len);
-	}
+//		else if  (!strcmp(header->method,"GET") && !strcmp(header->uri,"/favicon.ico")){
+//
+//			getTimeString(timeBuf);
+//			wr = snprintf((char *)out_header, sizeof(out_header),
+//					"HTTP/1.1 200 OK\r\n"
+//					"%s: %s\r\n"
+//					"%s: %s\r\n\r\n",
+//					WS_HDR_COT,WS_HDR_TEXT_HTML,
+//					WS_HDR_DATE,timeBuf
+//			);
+//			return gethtmlfile("./images/favicon.ico",out_header,wr, out_len);
+//	}
+//	else if(!strcmp(header->method,"GET")&& !strcmp(header->uri,"/styles.css")){
+//		getTimeString(timeBuf);
+//		wr = snprintf((char *)out_header, sizeof(out_header),
+//				"HTTP/1.1 200 OK\r\n"
+//				"%s: %s\r\n"
+//				"%s: %s\r\n\r\n",
+//				WS_HDR_COT,WS_HDR_TEXT_CSS,
+//				WS_HDR_DATE,timeBuf
+//		);
+//		return gethtmlfile("./styles/styles.css",out_header,wr, out_len);
+//	}
 	else{
 		parse_uri(header->uri);
 		fprintf(stdout,"\n\n\n\n404 request\n");
