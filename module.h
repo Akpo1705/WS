@@ -115,10 +115,11 @@ struct SERVER_CONF{
 
 #define WS_HDR_TEXT_HTML 		"text/html"
 #define WS_HDR_TEXT_CSS 		"text/css"
-#define WS_HDR_APPLICATION_JS 	"application/js"
+#define WS_HDR_APPLICATION_JS 	"application/json"
 #define WS_HDR_IMAGE_JPEG 		"image/jpeg"
 #define WS_HDR_IMAGE_PNG 		"image/png"
-#define WS_HDR_IMAGE_GIF 		"image/gif"
+#define WS_HDR_IMAGE_GIF 			"image/gif"
+#define WS_HDR_CONTENT_TYPE "text/plain"
 
 #define WS_HDR_CON_KEEP_ALIVE 	"keep-alive"
 #define WS_HDR_CON_CLOSE 		"close"

@@ -42,7 +42,7 @@ static int http_parse_headers(struct http_header *header, const char *hdr_line)
 
     if(!strcmp(WS_HDR_CON, "Connection")){
     	if(!strcmp(header_content, "keep-alive"))
-    		header->state = CONNECTING;
+    		header->state = CLOSED;
     	else
     	    header->state = KEEP_ALIVE;
     }
@@ -77,6 +77,8 @@ static int http_parse_headers(struct http_header *header, const char *hdr_line)
     		header->fetchDest = SCRIPT;
     	}else if(strcmp(header_content,"manifest") == 0){
     		header->fetchDest = MANIFEST;
+    	}else if(strcmp(header_content,"empty") == 0){
+    		header->fetchDest = EMPTY;
     	}
 
     }
@@ -192,7 +194,7 @@ static int ws_get_handshake_header_basic(char* out_buff, int out_len){
 char* ws_handshake(struct http_header *header, uint8_t *in_buf, int in_len, int *out_len){
 
 	char out_header[512];
-	unsigned char timeBuf[100];
+	char timeBuf[100];
 	size_t wr;
 
 	ws_http_parse_handsake_header(header, in_buf, in_len);
@@ -200,61 +202,57 @@ char* ws_handshake(struct http_header *header, uint8_t *in_buf, int in_len, int 
 	char path[255] = {0};
 	strcat(path,"./build");
 
-	if(header->fetchDest == STYLE || header->fetchDest == SCRIPT || header->fetchDest == MEDIA || header->fetchDest == MANIFEST){
+	if(header->fetchDest == STYLE || header->fetchDest == SCRIPT || header->fetchDest == MEDIA || header->fetchDest == MANIFEST || header->fetchDest == IMAGE){
+
+		fprintf(stdout,"OK OK OK");
 		getTimeString(timeBuf);
 			wr = snprintf((char *)out_header, sizeof(out_header),
 					"HTTP/1.1 200 OK\r\n"
 					"%s: %s\r\n"
 					"%s: %s\r\n\r\n",
 					WS_HDR_COT,WS_HDR_TEXT_CSS,
-					WS_HDR_DATE,""
+					WS_HDR_DATE,timeBuf
 			);
 			strcat(path,header->uri);
-
 			fprintf(stdout,"%s \n", path);
-
 			return gethtmlfile(path,out_header,wr, out_len);
 	}
 
-	if(!strcmp(header->method,"GET") && !strcmp(header->uri,"/")){
+	if(header->fetchDest == EMPTY ){
+		fprintf(stdout,"AAAAAAAAAAAAAAAaaa %d\n\n\n", header->fetchDest);
+		fprintf(stdout,"OK OK OK\n\n\n");
+
+		getTimeString(timeBuf);
+		wr = snprintf((char*)out_header, sizeof(out_header),
+					"HTTP/1.1 200 OK\r\n"
+					"%s: %s, */*; q=0.01\r\n%s:%s\r\n%s:%s\r\n",
+					WS_HDR_ACC, 	WS_HDR_APPLICATION_JS,
+					WS_HDR_DATE,""
+				);
+
+		char* answ2 = "{data: ['answer':test, 'answer2':test2]}";
+		char* answer = (char*)malloc(wr + sizeof(answ2));
+
+		strcat(answer, out_header);
+		strcat(answer, answ2);
+
+		fprintf(stdout,"%s \n", answer);
+
+		return answer;
+	}
+
+	if(!strcmp(header->method,"GET") && !strcmp(header->uri,"/") && header->fetchDest == DOCUMENT){
 		wr = ws_get_handshake_header_basic(out_header,sizeof(out_header));
 
 		strcat(path,"/index.html");
 		fprintf(stdout,"%s \n", path);
 		return gethtmlfile(path, out_header, wr ,out_len);
-	}
-//		else if  (!strcmp(header->method,"GET") && !strcmp(header->uri,"/favicon.ico")){
-//
-//			getTimeString(timeBuf);
-//			wr = snprintf((char *)out_header, sizeof(out_header),
-//					"HTTP/1.1 200 OK\r\n"
-//					"%s: %s\r\n"
-//					"%s: %s\r\n\r\n",
-//					WS_HDR_COT,WS_HDR_TEXT_HTML,
-//					WS_HDR_DATE,timeBuf
-//			);
-//			return gethtmlfile("./images/favicon.ico",out_header,wr, out_len);
-//	}
-//	else if(!strcmp(header->method,"GET")&& !strcmp(header->uri,"/styles.css")){
-//		getTimeString(timeBuf);
-//		wr = snprintf((char *)out_header, sizeof(out_header),
-//				"HTTP/1.1 200 OK\r\n"
-//				"%s: %s\r\n"
-//				"%s: %s\r\n\r\n",
-//				WS_HDR_COT,WS_HDR_TEXT_CSS,
-//				WS_HDR_DATE,timeBuf
-//		);
-//		return gethtmlfile("./styles/styles.css",out_header,wr, out_len);
-//	}
-	else{
+	} else{
 		parse_uri(header->uri);
 		fprintf(stdout,"\n\n\n\n404 request\n");
 		wr = snprintf((char *)out_header, sizeof(out_header),
 		                           "HTTP/1.1 400 Bad Request\r\n"
-		                           //"%s: %d\r\n\r\n"
 									"%s: %s\r\n\r\n",
-		                           //"Bad request",
-		                           //WS_HDR_VER, WS_VERSION,
 								   WS_HDR_COT,WS_HDR_TEXT_HTML);
 		return gethtmlfile("./html/404.html", out_header, wr, out_len);
 	}
